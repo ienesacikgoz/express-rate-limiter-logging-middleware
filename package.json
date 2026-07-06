@@ -1,0 +1,46 @@
+{
+  "name": "express-rate-limiter-logging-middleware",
+  "version": "1.0.0",
+  "description": "Production-ready Express middleware for rate limiting and structured logging with correlation IDs",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "lint": "eslint src/ --fix",
+    "docker:build": "docker build -t express-rate-limiter:latest .",
+    "docker:run": "docker run -p 3000:3000 --env-file .env express-rate-limiter:latest"
+  },
+  "keywords": [
+    "express",
+    "rate-limiting",
+    "logging",
+    "middleware",
+    "winston",
+    "helmet"
+  ],
+  "author": "Enes Açıkgöz",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.5.2",
+    "express-winston": "^4.2.0",
+    "helmet": "^8.2.0",
+    "jsonwebtoken": "^9.0.3",
+    "uuid": "^14.0.1",
+    "winston": "^3.19.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.54.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.2",
+    "supertest": "^6.3.3"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
