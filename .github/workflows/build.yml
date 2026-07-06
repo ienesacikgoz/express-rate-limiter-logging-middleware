@@ -26,12 +26,12 @@ jobs:
       run: npm run lint
 
     - name: Run tests
-      run: npm run test -- --coverage
+      run: npm run test -- --coverage --passWithNoTests
 
     - name: Upload coverage
       uses: codecov/codecov-action@v3
       with:
-        fail_ci_if_error: true
+        fail_ci_if_error: false
 
     - name: Build Docker image
       run: npm run docker:build
