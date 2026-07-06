@@ -14,7 +14,7 @@ const createRateLimiter = (options = {}) => {
     standardHeaders = true,
     legacyHeaders = false,
     keyGenerator = ipKeyGenerator,
-    skip = (req) => false,
+    skip = (_req) => false,
   } = options;
 
   return rateLimit({

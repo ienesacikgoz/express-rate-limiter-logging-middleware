@@ -4,7 +4,7 @@ const logger = require('../config/logger');
  * Custom error handling middleware
  * Catches and logs errors with proper HTTP status codes
  */
-const errorHandler = (err, req, res, next) => {
+const errorHandler = (err, req, res, _next) => {
   const requestId = req.id || 'unknown';
   const userId = req.userId || 'anonymous';
 
